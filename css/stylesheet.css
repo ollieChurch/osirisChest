@@ -1,0 +1,277 @@
+body {
+    padding: 0;
+    background: black;
+    color: white;
+    position: relative;
+    font-family: 'Fondamento', cursive;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+header {
+    background: black;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    text-align: center;
+}
+
+main,
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    background-image: url("../images/pyramids.jpg");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    background-color: gray;
+    height: 70vh;
+    justify-content: space-around;
+}
+
+footer {
+    background: black;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+main,
+footer,
+h3,
+.header-instruction {
+    letter-spacing: .2em;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Archivo Narrow', sans-serif;
+    line-height: 1em;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.5rem;    
+}
+
+button {
+    border: gray 2px groove;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+button:active {
+    background-color: gainsboro;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.container {
+    justify-content: center;
+    min-width: 775px;
+}
+
+/* ===== HEADER ===== */
+
+#logo {
+    text-align: center;
+    max-width: 40%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#header-instruction {
+	display: none;
+    width: 50%;
+    max-width: 500px;
+}
+
+/* ===== START SCREEN ===== */
+
+#screen-start {
+    background-image: url(../images/museum_full_screen.png);
+    background-position: bottom;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+/* ===== INPUT BOXES ===== */
+
+#container-input {
+	margin: .5em .5em 0 .5em;
+    min-height: 20%;
+    display: none;              
+}
+
+#input-boxes {
+    margin-bottom: 1em;
+}
+
+.reference-input,
+button {
+    font-family: inherit;
+    font-size: 2.5rem;
+    margin: 0 .1em;
+}
+
+.reference-input,
+.keyboard-btn {
+    width: 1.5em;
+    text-align: center;
+}
+
+.reference-input {
+    height: 1.5em;
+    margin-bottom: 0;
+}
+
+/* ===== KEYBOARD ===== */
+
+#errorMsg {
+    text-align: center;
+    visibility: hidden;
+    background: firebrick;
+    margin-bottom: .5em;
+    padding: 0 1em;
+}
+
+#container-keyboard {
+    flex-direction: column;
+    display: none;              
+}
+
+.keyboard-row {
+    margin-bottom: .5em;
+}
+
+.keyboard-btn-instruction {
+    width: 5em;
+}
+
+.keyboard-btn-submit {
+    background-color: palegreen;
+}
+
+.keyboard-btn-clear {
+    background-color: palevioletred;
+}
+
+/* ===== CLUES ===== */
+
+#container-clue {
+    display: none;
+    text-align: center;
+    min-height: 70%;
+}
+
+#clue-title {
+    text-transform: capitalize;
+}
+
+.clue-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+#clue-display-img {
+	max-height: 275px;
+    object-fit: center;
+    margin-bottom: 1em;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+
+.clue-btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    padding: .5em;
+}
+
+.clue-btn-label {
+    font-size: 1rem;
+}
+
+.clue-btn {
+    margin: .25em;
+    background: none;
+    border: none;
+}
+
+/* ===== ENDING ===== */
+
+#ending-title {
+    font-size: 4rem;
+    display: none;
+}
+
+#container-ending {
+    height: 50%;
+    display: none;
+    justify-content: space-around;    
+    text-align: center;
+}
+
+#ending-title {
+    margin-bottom: 1em;
+    display: block;
+}
+
+.ending-text {
+    font-size: 3rem;
+    max-width: 60%;
+}
+
+#ending-fail {
+    display: none;
+}
+
+#ending-win {
+    display: none;
+}
+
+/* ===== FOOTER ===== */
+
+#time,
+#hint-count {
+    padding: 0 0.5em;
+}

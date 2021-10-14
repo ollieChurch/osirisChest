@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,700&family=Fondamento&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+            <link href="css/stylesheet.css" rel="stylesheet">
+        </head>
+        
+        <body>
+            <header>
+                <div id="logo">
+                    <h1>Grand Egyptian</h1>
+                    <h3>The Archives</h3>
+                </div>
+                
+                <p id="header-instruction">Enter the five letter archive code to get a hint.</p>
+            </header>
+            
+            <main>
+                <div id="screen-start"></div>
+                
+                <div class="container" id="container-input">
+                    <div id="input-boxes"></div>
+                    <h2 id="clue-title"></h2>
+                </div>
+
+                <div class="container" id="container-keyboard">
+                    <p id="errorMsg">Search returned no results</p>
+                </div>
+
+                <div class="container" id="container-clue">
+                    <div class="clue-main">
+                        <div class="clue-btn-container">
+                            <p class="clue-btn-label">Keyboard</p>
+                            <button class="clue-btn" id="clue-btn-back">⬅️</button>
+                        </div>
+                        
+                        <div class="clue-display">
+                            <img id="clue-display-img" />
+                            <p id="clue-display-text"></p>
+                        </div>
+                        
+                        <div class="clue-btn-container" id="clue-btn-container-next">
+                            <p class="clue-btn-label" id="clue-btn-next-label"></p>
+                            <button class="clue-btn" id="clue-btn-next">➡️</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container" id="container-ending">
+                    <h2 id="ending-title">WIN/FAIL MESSAGE</h2>
+                    <p class="ending-text" id="ending-win">You cracked the Osiris Chest in <span id="ending-time">00:00</span> with <span id="ending-clueCount">0</span> hints.</p>
+                    <p class="ending-text" id="ending-fail">Unfortunately the investor has arrived to claim the chest and your time is up.</p>
+                </div>
+            </main>
+            
+            <footer>
+                <p id="time">Time remaining: <span id="time-display"></span></p>
+                <p>Hints requested: <span id="hint-count"></span></p>
+            </footer>
+            
+            <script src="node_modules/howler/src/howler.core.js"></script>
+            <script src="js/clueSystem.js" type="module"></script>
+        </body>
+    </html>
