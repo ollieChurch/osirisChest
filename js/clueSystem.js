@@ -91,7 +91,6 @@ function resetTimer() {
 
 // ===== START SCREEN SET UP ===== //
 
-const headerImage = document.getElementById("header-img-container")
 const headerInstruction = document.getElementById("header-instruction")
 const startScreen = document.getElementById("screen-start")
 
